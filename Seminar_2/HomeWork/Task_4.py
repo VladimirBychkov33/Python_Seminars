@@ -20,14 +20,13 @@ pos_2 = int(input())
 numbers = list(range(-n, n+1))
 print(numbers)
 list_len = len(numbers)
-pos_1 = numbers[pos_1 - 1]
-pos_2 = numbers[pos_2 - 1]
 
-if pos_1 < list_len > pos_2:         # не смог понять, как задать условия не корректности (т.е. вне списка)
-    product = pos_1 * pos_2
-    print(product)
+if list_len >= pos_1 > 0 and list_len >= pos_2 > 0:         # не смог придумать, как задать условия не корректности (т.е. вне списка)
+    print(numbers[pos_1 - 1] * numbers[pos_2 - 1])
 else:
     print("There are no values for these indexes!")
+
+
 
 
 
