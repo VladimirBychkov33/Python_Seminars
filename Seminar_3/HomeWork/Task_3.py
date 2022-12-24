@@ -17,3 +17,21 @@ def binary (number):
     print(*some_list, sep="")
 
 binary(n)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
