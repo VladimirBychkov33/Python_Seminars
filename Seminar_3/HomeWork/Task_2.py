@@ -10,21 +10,20 @@
 from random import sample      
 
 def get_list (amount):
-    new_list = sample(range(1,amount+1), k=amount)  # создание произвольного списка с произвольными значениями
+    new_list = sample(range(1,amount+1), k=amount)  
     return new_list
 
 def product_pair (some_list):
+    list_user = []
     list_len = len(some_list)
-    length = 0
-    if list_len % 2 == 0:
-        length = list_len/ 2
-    else:
-        length = list_len / 2 + 1
 
-    for i in length:
-        list_2 = some_list[i] * some_list[list_len - 1 - i]
-        print(list_2)
-
+    for i in range(list_len // 2):         
+        list_user.append(some_list[i] * some_list[list_len - i - 1])
+  
+    if list_len % 2:
+        list_user.append(some_list[list_len // 2])
+    return list_user
+    
 list_1 = get_list(int(input("Введите число: ")))
 print(list_1)
-product_pair(list_1)
+print(product_pair(list_1)) 
