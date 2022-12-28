@@ -10,7 +10,7 @@
 from random import sample      
 
 def get_list (amount):
-    new_list = sample(range(1,(amount+1)*3), k=amount)  # создание произвольного списка с произвольными значениями
+    new_list = sample(range(1,(amount+1)*3), k=amount)  # создание произвольного списка с неповторяющимися значениями
     return new_list
     
 
